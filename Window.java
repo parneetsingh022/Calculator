@@ -1,5 +1,6 @@
 import javax.swing.*;
 import utils.*;
+import components.*;
 
 public class Window{
     private int width = 400;
@@ -13,6 +14,8 @@ public class Window{
         frame.setLocationRelativeTo(null);
         frame.getContentPane().setBackground(MyColors.background);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+        frame.setLayout(null);
     }
 
     /*
@@ -20,7 +23,11 @@ public class Window{
      * Eg. Buttons, text field
      */
     public void populate(){
-        // frame.add(button);
+        // we're putting the width of the window because we 
+        // need our text field to be the size of the window horizontally.
+        TextField textField = new TextField(0,0,width);
+        frame.add(textField.getJTextField());
+        
     }
 
     public void show(){
