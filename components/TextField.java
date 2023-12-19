@@ -12,14 +12,15 @@ public class TextField {
     private JTextField textField;
     private Font font = new Font("Arial", Font.BOLD,20);
     private int margin = 10;
-    
-    public TextField(int x, int y, int width){
+ 
+
+    public TextField(int x, int y, int width) {
         textField = new JTextField();
         this.x = x + margin;
         this.y = y;
         this.width = width - 4*margin;
         this.height = 50;
-
+        
         textField.setBounds(this.x,this.y,this.width,this.height);
         textField.setFont(font);
         textField.setForeground(new Color(255,255,255));
@@ -36,9 +37,10 @@ public class TextField {
                 }
             }
         });
+
     }
 
-    public JTextField getJTextField(){
+    public JTextField getJTextField() {
         return textField;
     }
 }
